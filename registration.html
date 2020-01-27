@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration</title>
+	<link rel="shortcut icon" type="image/x-icon" href="attachments/favicon.ico">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> <!--  se escribe solo meta:vp y tab -->
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Montserrat|Muli|Poppins|Raleway|Sarabun|Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/nysl_6.css">
+</head>
+<body>
+	<div class="container0">
+
+		<header class="header">
+			<div class="headerBackground">
+				<div class="headerMask"></div>
+				<img class="headerImg" src="./attachments/Youth-Soccer.jpg" alt="">
+			</div>
+			<div id="logoBox">
+				<img id="logo" class="logo" src="./attachments/nysl_logo.png" alt="NYSL logo" width="100">
+			</div>
+			<div id="registrationBox">
+				<a class="currentPage" href="registration.html">Register !</a>
+			</div>
+			<div class="headerContent">
+				<h1 class="generalTitle">Northside Youth Soccer League</h1>
+				<nav id="generalMenu">
+					<a href="index.html">Home</a>
+					<a href="about.html">About NYSL</a>
+					<a href="game_info.html">Games Info</a>
+					<a href="rules.html">Rules & Policies</a>
+					<a href="contact.html">Contact</a>
+				</nav>	
+			</div>
+		</header>
+		
+
+		<section id="registrationMain" class="main">
+
+			<form action="show_data.html" method="GET" class="formBox">
+
+				<div class="formSection space1">
+					<input type="text" name="first_name" required>
+					<label for="first_name" class="labelBox">
+						<span class="labelContent">First Name</span>
+					</label>
+				</div>
+
+				<div class="formSection space1">
+					<input type="text" name="last_name" required>
+					<label for="last_name" class="labelBox">
+						<span class="labelContent">Last Name</span>
+					</label>
+				</div>
+
+				<div class="formSection spaceAll">
+					<input type="text" name="street_address" required>
+					<label for="street_address" class="labelBox">
+						<span class="labelContent">Street Address</span>
+					</label>
+				</div>
+
+				<div class="formSection space1">
+					<input type="text" name="city" required>
+					<label for="city" class="labelBox">
+						<span class="labelContent">City</span>
+					</label>
+				</div>
+
+				<div class="formSection space1">
+					<input type="text" name="zip_code" required>
+					<label for="zip_code" class="labelBox">
+						<span class="labelContent">Zip Code</span>
+					</label>
+				</div>
+
+				<div class="formSection space1">
+					<input type="text" name="birth_date" placeholder="mm/dd/yyy" required>
+					<label for="birth_date" class="labelBox">
+						<span class="labelContent">Birth Date</span>
+					</label>
+				</div>
+
+				<div class="formSectionRadio space1 bottomAlign">
+					<span>Gender</span> 
+					
+					<label class="labelRadioContent"><input type="radio" name="gender" value="female"><span class="checkedLabelColor">Female</span></label>
+					
+					<label class="labelRadioContent"><input type="radio" name="gender" value="male"><span class="checkedLabelColor">Male</span></label>
+				</div>
+
+				<div class="formSectionRadio spaceAll bottomAlign">
+					<span>Grade</span>
+					<label class="labelRadioContent"><input type="radio" name="grade" value="pre-school"><span class="checkedLabelColor">Pre-school</span></label>
+					<label class="labelRadioContent"><input type="radio" name="grade" value="1"><span class="checkedLabelColor">1<sup>st</sup></span></label>
+					<label class="labelRadioContent"><input type="radio" name="grade" value="2"><span class="checkedLabelColor">2<sup>nd</sup></span></label>
+					<label class="labelRadioContent"><input type="radio" name="grade" value="3"><span class="checkedLabelColor">3<sup>rd</sup></span></label>
+					<label class="labelRadioContent"><input type="radio" name="grade" value="4"><span class="checkedLabelColor">4<sup>th</sup></span></label>
+					<label class="labelRadioContent"><input type="radio" name="grade" value="5">5<sup>th</sup></label>
+				</div>
+
+				<div class="blankSpace"></div>
+
+				<div class="formSection space1">
+					<input type="text" name="parent_guardian" required>
+					<label for="parent_guardian" class="labelBox">
+						<span class="labelContent">Parent/Guardian</span>
+					</label>
+				</div>
+
+				<div class="formSection space1">
+					<input type="text" name="contact_phone" required>
+					<label for="contact_phone" class="labelBox">
+						<span class="labelContent">Contact Phone</span>
+					</label>
+				</div>
+
+				<div class="formSection spaceAll">
+					<input type="text" name="contact_email" placeholder="name@domain.com" required>
+					<label for="contact_email" class="labelBox">
+						<span class="labelContent">Contact Email</span>
+					</label>
+				</div>
+
+				<div class="blankSpace"></div>
+
+				<span class="formQuestion">Which elementary school do you live near?</span>
+				
+				<div class="formSectionDrop">
+					<label for="first_closest_school" class="labelDropContent">First Closest School</label>
+					<select name="first_closest_school" required>
+						<option value="empty"></option>
+						<option value="AJ_Katzenmaier">AJ Katzenmaier</option>
+						<option value="Greenbay">Greenbay</option>
+						<option value="Howard_A_Yeager">Howard A Yeager</option>
+						<option value="Marjorie_P_Hart">Marjorie P Hart</option>
+						<option value="North_Elementary">North Elementary</option>
+						<option value="South_Elementary">South Elementary</option>
+					</select>
+				</div>
+
+				<div class="formSectionDrop">
+					<label for="second_closest_school" class="labelDropContent">Second Closest School</label>
+					<select name="second_closest_school" required>
+						<option value="empty"></option>
+						<option value="AJ_Katzenmaier">AJ Katzenmaier</option>
+						<option value="Greenbay">Greenbay</option>
+						<option value="Howard_A_Yeager">Howard A Yeager</option>
+						<option value="Marjorie_P_Hart">Marjorie P Hart</option>
+						<option value="North_Elementary">North Elementary</option>
+						<option value="South_Elementary">South Elementary</option>
+					</select>
+				</div>
+
+				<span class="formQuestion">What position(s) do you normally play?<span>(check al that apply)</span></span>
+				<div class="formSectionCheckbox">
+					<label><input type="checkbox" name="position_normal" value="forward"><span class="checkedLabelColor">Forward</span></label>
+					<label><input type="checkbox" name="position_normal" value="midfield"><span class="checkedLabelColor">Midfield</span></label>
+					<label><input type="checkbox" name="position_normal" value="defense"><span class="checkedLabelColor">Defense</span></label>
+					<label><input type="checkbox" name="position_normal" value="goalkeeper"><span class="checkedLabelColor">Goalkeeper</span></label>
+				</div>
+
+				<span class="formQuestion">What position(s) do you want play?<span>(check al that apply)</span></span>
+				<div class="formSectionCheckbox">
+					<label><input type="checkbox" name="position_want" value="forward"><span class="checkedLabelColor">Forward</span></label>
+					<label><input type="checkbox" name="position_want" value="midfield"><span class="checkedLabelColor">Midfield</span></label>
+					<label><input type="checkbox" name="position_want" value="defense"><span class="checkedLabelColor">Defense</span></label>
+					<label><input type="checkbox" name="position_want" value="goalkeeper"><span class="checkedLabelColor">Goalkeeper</span></label>
+				</div>
+					
+				<span class="formQuestion">Uniform Sizes</span>
+
+				<div class="formSectionCheckbox">	
+					<label><input type="checkbox" name="has_uniform"><span class="checkedLabelColor">Already have a uniform</span></label>
+				</div>
+
+				<div class="blankSpace"></div>
+
+				<div class="formSizesBox">
+					<span class="formQuestion">Jersey Size:</span>
+					<div class="formSectionRadio">
+						<label class="labelRadioContent"><input type="radio" name="size_jersey" value="youth_small"><span class="checkedLabelColor">Youth Small</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_jersey" value="youth_medium"><span class="checkedLabelColor">Youth Medium</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_jersey" value="youth_large"><span class="checkedLabelColor">Youth Large</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_jersey" value="small"><span class="checkedLabelColor">Small</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_jersey" value="medium"><span class="checkedLabelColor">Medium</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_jersey" value="large"><span class="checkedLabelColor">Large</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_jersey" value="extra_large"><span class="checkedLabelColor">Extra-Large</span></label>
+					</div>
+				</div>
+
+				<div class="formSizesBox">
+					<span class="formQuestion">Shorts Size:</span>
+					<div class="formSectionRadio">
+						<label class="labelRadioContent"><input type="radio" name="size_shorts" value="youth_small"><span class="checkedLabelColor">Youth Small</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_shorts" value="youth_medium"><span class="checkedLabelColor">Youth Medium</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_shorts" value="youth_large"><span class="checkedLabelColor">Youth Large</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_shorts" value="small"><span class="checkedLabelColor">Small</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_shorts" value="medium"><span class="checkedLabelColor">Medium</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_shorts" value="large"><span class="checkedLabelColor">Large</span></label>
+						<label class="labelRadioContent"><input type="radio" name="size_shorts" value="extra_large"><span class="checkedLabelColor">Extra-Large</span></label>
+					</div>
+				</div>
+
+
+				<div class="permission">
+					<span>Permission to Play</span>
+					<p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the rules of the Northside Youth Soccer League (NYSL). In recognizing the possibility of physical injury associated with soccer and in consideration for the “League” accepting the registrant for its soccer programs and activities, I hereby release, discharge, and/or otherwise indemnify NYSL, their employees and associated personnel and volunteers, including the facilities used for practices and games, against any claim by or on behalf of the registrant as a result of the registrant’s participation in the program and/or being transported to or from NYSL sponsored activities, which transportation.
+					By signing below, I hereby agree and authorize the above. In addition, by writing your name below, I also acknowledge that I have read the cancellation policy and agree to its terms.</p>
+					
+					<div class="formSectionPermission spaceP">
+						<label class="labelPermission" for="signature_name">Parent/Guardian Name</label>
+						<input type="text" name="signature_name" autocomplete="off" required>
+						<div class="permissionBox"></div>
+					</div>
+					<div class="formSectionPermission spaceP">
+						<label class="labelPermission" for="signature_date">Date</label>
+						<input type="text" name="signature_date" placeholder="mm/dd/yyyy" autocomplete="off" required>
+						<div class="permissionBox"></div>
+					</div>
+				</div>
+
+
+				<input class="sendButton" type="submit" name="submit" value="Send">
+			</form>
+		</section>
+	</div>
+	<footer class="footer">
+		<div class="autor">
+			<span>This webpage was made by Daniela Witteveen</span>
+		</div>
+		<div class="footherlinks">
+			
+		</div>
+	</footer>
+</body>
+</html>

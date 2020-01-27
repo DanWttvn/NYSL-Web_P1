@@ -1,0 +1,1140 @@
+/* -----------------------------------------------CON FLEXBOX------------------------------------------------*/
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	-webkit-webkit: content-box;
+	-moz-webkit: content-box;
+	-ms-webkit: content-box;
+	-o-webkit: content-box;
+	webkit: content-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px; /* antes a 20, austar resto de paginas */
+}
+.container0 {
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+/* --------------FONTS------------------*/
+
+.main {
+	font-size: 1em;
+}
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 3em;
+	font-weight: normal;
+}
+h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	font-weight: normal;
+	color: white;
+	margin-bottom: 0.5em;
+	margin-top: 0;
+}
+h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6em;
+	color: #f12222;
+	font-weight: normal;
+	margin-top: 0.7em;
+	margin-bottom: 0.5em;
+}
+nav a {
+	font-family: 'Raleway', sans-serif !important;
+	text-decoration: none;
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#registrationBox a {
+	text-decoration: none;
+	color: white;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+/* ********************************************************************************** */
+
+/*.container0 {
+	background: grey;
+}
+
+.header {
+	background: red;
+}
+
+.generalTitle {
+	background: green;
+}*/
+
+/*#generalMenu {
+	background: lightgreen;
+}*/
+/*
+.main {
+	background: green;
+}
+
+.textBlock {
+	background: orange;
+}
+
+.imgBox {
+	background: darkorange;
+}
+
+.contactText {
+	background: green;
+}
+*/
+
+/* ********************************************************************************** */
+
+
+
+/* -------------- HEADER ------------------*/
+
+
+
+.header {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	height: 300px;
+}
+
+.headerBackground {
+	position: absolute;
+	width: 100%;
+}
+
+.headerImg {
+	width: 100%;
+}
+
+.headerMask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	background: black;
+	opacity: 0.2;
+}
+
+.headerContent {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.generalTitle {
+	width: 87%;
+	padding: 5px 60px 0 50px;
+	z-index: 10;
+}
+
+#generalMenu {
+	z-index: 10;
+	padding: 10px 25px;
+	margin-bottom: 10px;
+	margin-right: 15px;
+	align-self: flex-end;
+}
+
+#logoBox{
+	z-index: 10;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	top: 20px;
+	right: 45px;
+}
+
+#registrationBox {
+	z-index: 10;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	bottom: 60px;
+	right: 38px;
+}
+
+
+/* -------------- MENU------------------*/
+
+#generalMenu {
+	z-index: 10;
+	padding: 10px 25px;
+	align-self: flex-end;
+}
+
+#generalMenu a {
+	margin: 0 5px;
+	text-align: center;
+	padding: 0.7em 1.2em;
+	position: relative;
+}
+
+/* ...... hover animation ......*/
+
+#generalMenu a::after {
+	content: "";
+	position: absolute;
+	bottom: 4px;
+	left: 50%;
+	background-color: #f12222;
+	width: 0%;
+	height: 3px;
+}
+
+
+#generalMenu a:hover::after {
+	width: 100%;
+	left: 0;
+	transition: all 0.3s ease;
+}
+
+#generalMenu .currentPage::after {
+	content: "";
+	position: absolute;
+	bottom: 3px;
+	background-color: #f12222;
+	height: 3px;
+	width: 100%;
+	left: 0;
+}
+
+#generalMenu .currentPage {
+	pointer-events: none; /* boton inactivo cuando activado */
+	cursor: default;
+}
+
+#registrationBox a {
+	margin: 0 5px;
+	text-align: center;
+	padding: 0.7em 1.2em;
+	border-radius: 30px;
+	border: white 1.5px solid;
+	background: #f12222;
+
+}
+
+#registrationBox a:hover {
+	color: #f12222;
+	border: #f12222 1.5px solid;
+	background: white;	
+	transition: all 0.2s ease;
+}
+
+#registrationBox .currentPage {
+	color: #f12222;
+	border: #f12222 1.5px solid;
+	background: white;	
+
+	pointer-events: none; /* boton inactivo cuando activado */
+	cursor: default;
+}
+
+
+/*
+.container0 {
+	width: 100% !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+
+
+
+
+/* -------------- GENERAL LAYOUT ------------------*/
+
+.main {
+	margin-top: 3em;
+	margin-bottom: 2em;
+	width:100%; 
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+}
+
+.textBlock {
+	/*width: 60%; */
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.imgBox {
+	width: 37%;
+	padding: 1em 3em 1em 0;
+	margin-right: 2em;
+
+
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+
+
+
+/*........ home .........*/
+
+#homeMain .textBlock {
+
+	padding-left: 5em;
+	padding-top: 3em;
+
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+}
+
+.lineCalendar {
+	height: 6.5px;
+	width: 2.8em;
+	background: #f12222;
+	margin-bottom: 0.6em;
+}
+
+.homeEvent {
+	margin-bottom: 2em;
+	padding-right: 2em;
+}
+
+#homeMain img {
+	/*width: 100%;*/
+	height: 100%;
+	align-self: flex-start;
+
+	/*min-width: 330px;*/
+	border-radius: 10%;
+}
+
+
+/*........ about ........*/
+
+#aboutMain .textBlock {
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-top: 1em;
+	width: 70%;
+}
+
+.cardMV {
+	width: 45%;
+	padding: 2.1em 2.1em 2.1em 2.3em;
+	background-color: #f12222;
+	border-radius: 1em;
+
+	align-self: flex-end;
+}
+
+.cardGeneral {
+	width: 100%;
+	background-color: #2c425e;
+	padding: 1.8em 2.1em 2.1em;
+	border-radius: 1em;
+	margin-top: 1.9em;
+
+	align-self: flex-start;
+}
+
+#aboutMain p {
+	color: white;
+	/*font-size: 1em;*/
+	line-height: 1.3em;
+	margin-bottom: 0;
+}
+
+#aboutMain .imgBox {	
+	width: 30%;	
+
+	border-radius: 10%;	
+	vertical-align: top;
+
+	align-self: flex-start;
+
+	margin-right: 0;
+}
+
+#aboutMain img {	
+	width: 100%;	
+
+	border-radius: 10%;	
+	vertical-align: top;
+
+	align-self: flex-start;
+}
+
+
+/*........ contact .........*/
+
+
+#contactMain img {
+	width: 62%;
+	border-radius: 10%;	
+	vertical-align: top;
+	align-self: flex-start;
+}
+
+#contactMain .textBlock {
+	justify-content: center;
+}
+
+.contactText {
+	align-self: center;
+
+	border: 1.5px solid #ccc;
+	padding: 1em 2em;
+
+	-webkit-box-shadow: -8px 10px 17px -15px rgba(0,0,0,0.29),  0px 0px 34px -4px rgba(0,0,0,0.03);
+	-moz-box-shadow: -8px 10px 17px -15px rgba(0,0,0,0.29), 0px 0px 34px -4px rgba(0,0,0,0.03);
+	box-shadow: -8px 10px 17px -15px rgba(0,0,0,0.29), 0px 0px 34px -4px rgba(0,0,0,0.03);
+
+}
+
+#contactMain .contactText a {
+	text-decoration: underline;
+}
+
+#contact p {
+	margin-bottom: 1em;
+}
+
+
+
+/*........ rules .........*/
+
+.ruleTitle {
+	/*font-weight: bold;*/
+}
+
+.ruleSubTitle {
+	/*font-weight: bold;*/
+}
+
+.lettersBullets {
+	list-style-type: lower-alpha;
+}
+
+#rulesMain {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.rulesBox {
+	border: 1px solid #ccc;
+	padding: 2.5em 3.7em 2.5em 1.8em;
+	text-align: justify;
+	margin-bottom: 2em;
+}
+
+/*++bootstrap++*/
+.accordion {
+	width: 100%;
+}
+
+.btn-link {
+    font-weight: 600 !important;
+    color: #f12222 !important;
+}
+.btn {
+	text-transform: lowercase;
+}
+
+.btn::first-letter {
+	text-transform: uppercase;
+}
+
+.card-header {
+    background-color: rgba(44,66,94,.03) !important; 
+}
+
+/*........ game info .........*/
+
+
+.infoTablesBox {
+	border: 1.5px solid #ccc;
+	border-radius: 1.7em;
+	margin-bottom: 2em;
+
+	-webkit-box-shadow: -8px 10px 17px -15px rgba(0,0,0,0.29),  0px 0px 34px -4px rgba(0,0,0,0.03);
+	-moz-box-shadow: -8px 10px 17px -15px rgba(0,0,0,0.29), 0px 0px 34px -4px rgba(0,0,0,0.03);
+	box-shadow: -8px 10px 17px -15px rgba(0,0,0,0.29), 0px 0px 34px -4px rgba(0,0,0,0.03);
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+
+	overflow: hidden;
+}
+
+.tableTitleBox {
+	background: #f12222;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+}
+
+.locations .tableTitleBox {
+	background: #2c425e;
+}
+
+.tableTitleBox span {
+	
+	color: white;
+	font-size: 1.5em;
+
+	display:inline-block;
+  	-webkit-transform: rotate(-90deg);
+  	-ms-transform: rotate(-90deg);
+ 	transform: rotate(-90deg);
+
+}
+
+.tableContent {
+	padding: 1.2em;
+}
+
+.dates {
+	width: auto;
+}
+
+#datesBox2month {
+	align-self: flex-end;
+}
+
+.locations {
+	width: auto;
+	align-self: flex-start;
+}
+
+.extraInfoBox {
+	width: 250px;
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 2em;
+}
+
+.extraInfoText {
+	border: 1.5px solid #ccc;
+	padding: 1.2em;
+	font-size: 0.9em;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th,
+td {
+	border-bottom: 1px solid #cecfd5;
+	padding: 10px 15px;
+
+	font-size: 0.9em;
+}
+
+
+/* -------------- REGISTRATION ------------------*/
+
+.formBox {
+	margin: 3em auto;
+	width: 51%;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+}
+
+.space1 {
+	width: 48%;
+}
+
+.spaceAll {
+	width: 100%;
+}
+
+.formSection {
+	position: relative;
+	height: 50px;
+
+	overflow: hidden; /* para esconder lo que sobra de la linea de subrayado */
+}
+
+.formSection input {
+	width: 100%;
+	height: 100%;
+	color: #595f6e;
+	font-size: 14px;
+	padding-top: 20px;
+	border: none;
+	outline: none;
+}
+
+.formSection label {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;	/* hace que no reaccione al raton, por lo que puedo clickar en el input aunque este encima esto */
+	border-bottom: 1px solid black;
+}
+
+.formSection label::after {
+	content: ""; /* puedo añadir cosas extra despues, pero solo querio styles */
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 3px solid #5fa8d3;
+
+	transform: translateX(-100%); /* para que aparezca desde la izq. luego con overflow hidden se esconde lo que solabelRadioContenta*/
+	transition: transform 0.3s ease;
+}
+
+.labelContent {
+	position: absolute;
+
+	background: white; /* para que no se vea el placeholder */
+	width: 100%;
+
+	bottom: 5px;
+	left: 0;
+	transition: all 0.3s ease;
+}
+
+.formSection input:focus + .labelBox .labelContent, /* el + indica que el que esté debajo. cuando clickamos en el input, afecta al label así: */
+.formSection input:valid + .labelBox .labelContent { /* cuando se mete info, se queda ahí */
+	transform: translateY(-150%);
+	font-size: 14px;
+	color: #5fa8d3;
+	background: none;
+}
+
+.formSection input:focus + .labelBox::after,
+.formSection input:valid + .labelBox::after {
+	transform: translateX(0%);
+}
+
+
+/* ......radio..........*/
+
+.formSectionRadio {
+	position: relative;
+}
+
+.formSizesBox .labelRadioContent{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.bottomAlign {
+	margin-top: 32px;
+}
+
+.formSectionRadio .spaceAll {
+	width: 100%;
+}
+
+.blankSpace {
+	height: 30px;
+	width: 100%;
+}
+
+input[type="radio"]:checked + .checkedLabelColor,
+ input[type="checkbox"]:checked + .checkedLabelColor{
+	color: #5fa8d3;
+}
+
+/*input[name="has_uniform"]:checked + .formSizesBox {
+	pointer-events: none;
+}*/ /* para que se desabilite???? */
+
+/* ......checkbox.........*/
+
+.formQuestion {
+	margin-top: 30px;
+	font-weight: bold;
+	width: 100%;
+
+}
+
+.formSizesBox {
+	width: 50%;
+}
+
+/* ......dropdown.........*/
+
+.formSectionDrop select {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1em;
+	margin-top: 0.7em;
+}
+
+/* ......permission......*/
+
+.permission {
+	margin-top: 2em;
+}
+
+.permission p {
+	font-size: 14px;
+}
+
+.formSectionPermission {	
+	margin-bottom: 2em;
+	position: relative;
+	height: 50px;
+	width: 100%;
+
+	overflow: hidden;
+}
+
+.formSectionPermission .permissionBox {	/* caja para despues labelRadioContent subayado gordo */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 1px solid black;
+
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.formSectionPermission input {	/* letras dentro */
+	width: 100%;
+
+	color: #595f6e; 
+	font-size: 14px;
+	border: none;
+	outline: none;
+	padding-top: 9px;
+}
+
+.formSectionPermission .permissionBox::after {
+	content: ""; 
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 3px solid #5fa8d3;
+
+	transform: translateX(-100%);
+	transition: transform 0.3s ease;
+}
+
+.formSectionPermission input:focus + .labelPermission,
+.formSectionPermission input:valid + .labelPermission {
+	color: #5fa8d3;
+} /******** no se por que no funciona */
+
+
+.formSectionPermission input:focus + .permissionBox::after,
+.formSectionPermission input:valid + .permissionBox::after {
+	transform: translateX(0%);	/* habia que ponerle required!!!!*/
+}                 
+
+/* ......send......*/
+
+.sendButton {
+	top: 50px;
+	position: relative;
+	display: block;
+	font-size: 1.1em;
+
+	margin: 0 5px 15px;
+	text-align: center;
+	padding: 0.7em 1.2em;
+	border-radius: 30px;
+	border: white 1.5px solid;
+	background: #f12222;
+	color: white;
+}
+
+.sendButton:hover {
+	color: #f12222;
+	border: #f12222 1.5px solid;
+	background: white;	
+	transition: all 0.2s ease;
+}
+
+.sendButton:active {
+	margin: 0 5px;
+	text-align: center;
+	padding: 0.7em 1.2em;
+	border-radius: 30px;
+	border: white 1.5px solid;
+	background: #f12222;
+	color: white;
+}
+
+
+/* -------------- FOOTER ------------------*/
+
+.footer {
+	margin-top: 0em;
+	width: 100%;
+	height: 80px;
+	background: #242F36;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.footer span {
+	font-size: 0.8em;
+	color: white;
+	padding: 0 3em;
+}
+
+
+/************************************************************************/
+
+/*.formSection {
+	background: black;
+}
+
+.formsection input {
+	background: green;
+}
+
+.formSection label {
+	background: orange;
+}
+.labelContent {
+	background: red;
+}
+*/
+/************************************************************************/
+
+
+
+/* ------------------------ MEDIAQUERY ----------------------------------------------------------------------------------*/
+
+/* es conndicional */
+
+@media screen and (max-width: 1600px) {
+	.container0 {
+		width: 100%;
+	}
+
+	.main {
+		margin-right: 2em;
+		margin-left: 2em;
+	}
+	
+	#aboutMain .imgBox {
+		padding-right: 0; 
+	}
+
+}
+
+@media screen and (max-width: 1320px) {
+
+	#gameInfoMain {
+		padding-right: 2em;
+		padding-left: 2em;
+	}
+	
+	#datesBox1month {
+		order: 1;
+		position: relative;
+	}
+	.extraInfoBox {
+		order: 2;
+		position: relative;
+	}
+	#datesBox2month {
+		order: 3;
+		position: relative;
+		margin-left: 40%;
+	}
+	.locations {
+		order: 4;
+		position: relative;
+		
+	}
+	.mapBox {
+		order: 5;
+		position: relative;
+	}
+	
+}
+
+
+@media screen and (max-width: 1200px) {
+
+	body {
+		font-size: 15px;
+	}
+
+	.dates {
+		width: 490px;
+	}
+	
+	.extraInfoBox {
+		margin-right: 1em;
+	}
+
+
+	#aboutMain .imgBox {
+		margin-right: 0;
+	}
+
+	#contactMain .textBlock {
+		width: 50%;
+	}
+
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+	#homeMain .textBlock {
+		width: 50%;
+	}
+
+	.homeEvent {
+		margin-bottom: 0;
+	}
+
+	/* GAME INFO */
+
+	#gameInfoMain {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.extraInfoBox {
+		width: 100%;
+	}
+
+	#datesBox2month {
+		margin-left: 0;
+
+	}
+
+	.location {
+    	align-self: auto;	
+	}
+
+	.cardMV {
+		width: 48%;
+	}
+	
+	#aboutMain .textBlock {
+		padding-right: 2em;
+		padding-left: 2em;
+	}
+
+	/* FORM */
+	.formBox {
+		width: 70%;
+	}
+
+}
+
+@media screen and (max-width: 780px) {
+
+	#homeMain .imgBox {
+		padding-right: 0;
+	}
+
+	#homeMain .textBlock {
+		padding-left: 2em;
+	}
+
+	/* about */
+
+	#aboutMain .textBlock {
+		width: 100%;
+	}
+
+	#aboutMain .imgBox {
+		width: 100%;
+		justify-content: center;
+	}
+
+	#aboutMain img {
+		width: 50%;
+		align-self: center;
+	}
+
+	/* GAME INFO */
+	#gameInfoMain {
+		align-items: center;
+	}
+
+	#datesBox2month {
+    	align-self: auto;
+	}
+
+	.dates {
+		width: auto;
+	}
+
+	.mapBox {
+		width: 100%;
+	}
+
+	.map {
+		width: 100%;
+	}
+
+	/* CONTACT */
+	#contactMain .imgBox {
+		padding-right: 0;
+	}	
+
+	#contactMain img {
+		width: 90%;
+	}	
+
+	/* MENU */
+
+	#generalMenu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	body {
+		font-size: 14px;
+	}
+}
+
+
+@media screen and (max-width: 450px) {
+
+	body {
+		/*font-size: 12px;*/
+	}
+
+	h1 {
+		font-size: 2.3em;
+	}
+
+	.main {
+		margin-top: 0em;
+	}
+
+	.cardMV {
+		width: 100%;
+	}
+
+	#visionCard {
+		margin-top: 1.9em;
+	}
+
+	/* GAME INFO */
+
+	#gameInfoMain {
+		padding-left: 0;
+		padding-right: 0;
+		margin-right: 1em;
+		margin-left: 1em;
+
+	}
+
+	.tableContent {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.tableTitleBox {
+	    width: 12%;
+	}
+	.tableContent {
+		width: 85%;
+	}
+
+	/* RULES */
+	.rulesBox {
+		padding-left: 0;
+		padding-right: 2.5em;
+		padding-top: 1.5em;
+	}
+	
+	h1 {
+		font-size: 2.3em;	
+	}
+	.generalTitle {
+		width: 75%;
+	}
+
+	#logo {
+		width: 70px;
+	}
+
+	#homeMain .textBlock {
+		width: 100%;
+		margin: 0 2em;
+		padding: 0;		
+	}
+
+	#homeMain .imgBox {
+		width: 100%;
+		margin: 0 2em;		
+	}
+
+	/* CONTACT */
+	#contactMain .imgBox {
+		margin-right: 0;
+	}
+
+	#gameInfoMain .dates td,
+	#gameInfoMain .dates th {
+		padding-right: 0.8em;
+		padding-left: 0.8em;
+
+		max-width: 75px;
+	}
+
+	/* FORM */
+	.formBox {
+		margin: 0;
+		align-self: center;
+		width: 100%;
+		padding: 0 1em;
+	}
+	.space1 {
+		width: 100%;
+	}
+
+	/* FOOTER */
+	.footer span {
+		font-size: 0.7em;
+
+	}
+
+}

@@ -1,0 +1,43 @@
+body {
+	font-family: sans-serif;
+}
+
+.titluloBox,
+.fechasBox {
+	/*display: inline-block;*/
+}
+
+.caja {
+	border: 2px solid #ccc;
+	padding: 1em 2em 1em 0;
+	border-radius: 40px;
+	width: 300px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	/*align-items: center;*/
+	/*align-content: flex-start;*/
+}
+
+p {
+	margin-top: 0.6em;
+    margin-bottom: 0.6em;
+}
+
+.tituloBox {
+	background: red;
+	padding: 2em;
+	margin: 0;
+
+	align-self: center;
+	transform: rotate(-90deg);
+
+	
+}
+
+.title {
+	color: white;
+	/*transform: rotate(-90deg);*/
+
+}
