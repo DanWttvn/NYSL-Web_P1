@@ -565,6 +565,8 @@ td {
 	flex-flow: row wrap;
 	justify-content: space-between;
 
+	z-index: 20;
+
 }
 
 .space1 {
