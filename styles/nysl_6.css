@@ -7,7 +7,6 @@
 	-moz-webkit: content-box;
 	-ms-webkit: content-box;
 	-o-webkit: content-box;
-	webkit: content-box;
 }
 body {
 	margin: 0;
@@ -251,15 +250,6 @@ nav a {
 	pointer-events: none; /* boton inactivo cuando activado */
 	cursor: default;
 }
-
-
-/*
-.container0 {
-	width: 100% !important;
-	margin-right: auto !important;
-	margin-left: auto !important;
-
-
 
 
 /* -------------- GENERAL LAYOUT ------------------*/
