@@ -7,6 +7,7 @@
 	-moz-webkit: content-box;
 	-ms-webkit: content-box;
 	-o-webkit: content-box;
+	webkit: content-box;
 }
 body {
 	margin: 0;
@@ -30,7 +31,7 @@ h1 {
 	font-family: 'Montserrat', sans-serif;
 	color: white;
 	font-size: 3em;
-	font-weight: normal;
+	font-weight: 700;
 }
 h3 {
 	font-family: 'Montserrat', sans-serif;
@@ -101,10 +102,8 @@ nav a {
 
 /* ********************************************************************************** */
 
-
-
 /* -------------- HEADER ------------------*/
-
+/* çççççççççççççççççççççççç */
 
 
 .header {
@@ -112,33 +111,37 @@ nav a {
 	position: relative;
 	overflow: hidden;
 	height: 300px;
+	background-image: url(../attachments/Youth-Soccer.jpg);
+	background-position: top;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-.headerBackground {
+/* .headerBackground {
 	position: absolute;
 	width: 100%;
-}
-
-.headerImg {
+} */
+/* .headerImg {
 	width: 100%;
-}
+} */
 
 .headerMask {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-
 	background: black;
 	opacity: 0.2;
 }
-
+/* 
 .headerContent {
 	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
+} */
 
 
 .generalTitle {
@@ -155,23 +158,28 @@ nav a {
 	align-self: flex-end;
 }
 
-#logoBox{
+#logo{
+	width: 105px;
 	z-index: 10;
-	width: 100%;
 	position: absolute;
-	display: flex;
-	justify-content: flex-end;
 	top: 20px;
 	right: 45px;
 }
 
-#registrationBox {
+/* #registrationBox {
 	z-index: 10;
 	width: 100%;
 	position: absolute;
 	display: flex;
 	justify-content: flex-end;
 	bottom: 60px;
+	right: 38px;
+} */
+
+#registrationBox {
+	z-index: 10;
+	position: absolute;
+	bottom: 70px;
 	right: 38px;
 }
 
@@ -232,7 +240,6 @@ nav a {
 	border-radius: 30px;
 	border: white 1.5px solid;
 	background: #f12222;
-
 }
 
 #registrationBox a:hover {
@@ -251,6 +258,23 @@ nav a {
 	cursor: default;
 }
 
+/* ------- SCROLLBAR ------- */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0,0,0,0.05);
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);  */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0,0,0,0.15);
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+    border-radius: 10px;
+}
 
 /* -------------- GENERAL LAYOUT ------------------*/
 
@@ -799,7 +823,6 @@ input[type="radio"]:checked + .checkedLabelColor,
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
-
 }
 
 .footer span {
@@ -809,7 +832,7 @@ input[type="radio"]:checked + .checkedLabelColor,
 }
 
 
-/************************************************************************/
+/***********DEVELOPMENT*************************************************************/
 
 /*.formSection {
 	background: black;
@@ -832,7 +855,6 @@ input[type="radio"]:checked + .checkedLabelColor,
 
 /* ------------------------ MEDIAQUERY ----------------------------------------------------------------------------------*/
 
-/* es conndicional */
 
 @media screen and (max-width: 1600px) {
 	.container0 {
@@ -878,8 +900,7 @@ input[type="radio"]:checked + .checkedLabelColor,
 	.mapBox {
 		order: 5;
 		position: relative;
-	}
-	
+	}	
 }
 
 
@@ -905,7 +926,6 @@ input[type="radio"]:checked + .checkedLabelColor,
 	#contactMain .textBlock {
 		width: 50%;
 	}
-
 }
 
 
@@ -956,6 +976,17 @@ input[type="radio"]:checked + .checkedLabelColor,
 }
 
 @media screen and (max-width: 780px) {
+	.header {
+		height: 280px;
+	}
+
+	#generalMenu a {
+		margin: 10px 2px;
+	}	
+	
+	nav a {
+		font-size: 0.9em;
+	}
 
 	#homeMain .imgBox {
 		padding-right: 0;
@@ -1010,12 +1041,6 @@ input[type="radio"]:checked + .checkedLabelColor,
 	#contactMain img {
 		width: 90%;
 	}	
-
-	/* MENU */
-
-	#generalMenu {
-		display: none;
-	}
 }
 
 @media screen and (max-width: 600px) {
@@ -1026,14 +1051,22 @@ input[type="radio"]:checked + .checkedLabelColor,
 }
 
 
-@media screen and (max-width: 450px) {
-
-	body {
-		/*font-size: 12px;*/
-	}
+@media screen and (max-width: 550px) {
 
 	h1 {
-		font-size: 2.3em;
+		font-size: 2em;
+	}
+
+	.header {
+		height: 200px;
+	}
+	
+	.generalTitle {
+		width: 75%;
+	}
+
+	#logo {
+		width: 70px;
 	}
 
 	.main {
@@ -1048,6 +1081,10 @@ input[type="radio"]:checked + .checkedLabelColor,
 		margin-top: 1.9em;
 	}
 
+	.textBlock {
+		margin-top: 30px !important;
+	}
+
 	/* GAME INFO */
 
 	#gameInfoMain {
@@ -1055,7 +1092,6 @@ input[type="radio"]:checked + .checkedLabelColor,
 		padding-right: 0;
 		margin-right: 1em;
 		margin-left: 1em;
-
 	}
 
 	.tableContent {
@@ -1075,17 +1111,6 @@ input[type="radio"]:checked + .checkedLabelColor,
 		padding-left: 0;
 		padding-right: 2.5em;
 		padding-top: 1.5em;
-	}
-	
-	h1 {
-		font-size: 2.3em;	
-	}
-	.generalTitle {
-		width: 75%;
-	}
-
-	#logo {
-		width: 70px;
 	}
 
 	#homeMain .textBlock {
